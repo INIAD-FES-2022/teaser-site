@@ -1,4 +1,4 @@
-import React, { FC, FunctionComponent,ReactNode, useState } from "react";
+import React, { FC, ReactNode, useState } from "react";
 import styles from "../styles/Terminal.module.scss";
 
 type Props = {
@@ -10,9 +10,9 @@ type Props = {
 
 export const Terminal: FC<Props> = ({
     children,
-    size="Medium",
-    isDeletable =false,
-    isMinimizable=false,
+    size = "Medium",
+    isDeletable = false,
+    isMinimizable = false,
 }) => {
     // ターミナル風の何かに表示されている様な見た目にする
     // sizeは指定がなければ"Medium"になる
@@ -24,7 +24,8 @@ export const Terminal: FC<Props> = ({
     const [isMinimize, setIsMinimize] = useState(false);
 
     return (
-        // 空のfragment(<></>)を使うなって怒られるけれど、
+        // NOTE 空のfragment(<></>)を使うな(isDeletedがtrueの時に空のfragment(<></>)になる)って怒られるけれど、
+        // JSX.Elementを返したいので無視している、もっと良いやり方はあるのだろうか
         // eslint-disable-next-line react/jsx-no-useless-fragment
         <>
             {!isDeleted && (
