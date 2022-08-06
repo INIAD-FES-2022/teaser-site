@@ -39,12 +39,12 @@ module.exports = {
     rules: {
         // "no-use-before-define": "off",
         // "@typescript-eslint/no-use-before-define": ["error"],
+        "react/require-default-props": "off", // ts+関数コンポーネントなので、default propsの警告は不要だし、デフォルト引数で書くと怒られるので
         "import/prefer-default-export": "off",
         "import/no-default-export": "error",
         "@typescript-eslint/no-unused-expressions": [
             "error",
-            { allowTernary: true
-            },
+            { allowTernary: true },
         ],
         "lines-between-class-members": [
             "error",
@@ -91,10 +91,7 @@ module.exports = {
         "react/jsx-filename-extension": [
             "error",
             {
-                extensions: [
-                    ".jsx",
-                    ".tsx"
-                ],
+                extensions: [".jsx", ".tsx"],
             },
         ],
         "react/jsx-props-no-spreading": [
@@ -124,9 +121,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: [
-                "*.tsx"
-            ],
+            files: ["*.tsx"],
             rules: {
                 "react/prop-types": "off",
             },
@@ -135,9 +130,7 @@ module.exports = {
     settings: {
         "import/resolver": {
             node: {
-                paths: [
-                    "src"
-                ],
+                paths: ["src"],
             },
         },
     },
