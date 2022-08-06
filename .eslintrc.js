@@ -37,28 +37,12 @@ module.exports = {
     ],
     root: true,
     rules: {
-        // "no-use-before-define": "off",
-        // "@typescript-eslint/no-use-before-define": ["error"],
-        "react/require-default-props": "off", // ts+関数コンポーネントなので、default propsの警告は不要だし、デフォルト引数で書くと怒られるので
-        "import/prefer-default-export": "off",
-        "import/no-default-export": "error",
+        "import/prefer-default-export": "off", // default exportよりnamed export派なので
+        "import/no-default-export": "error", // default exportよりnamed export派なので
         "@typescript-eslint/no-unused-expressions": [
             "error",
             { allowTernary: true },
-        ],
-        "lines-between-class-members": [
-            "error",
-            "always",
-            {
-                exceptAfterSingleLine: true,
-            },
-        ],
-        "no-void": [
-            "error",
-            {
-                allowAsStatement: true,
-            },
-        ],
+        ], // 返り値がvoidの三項演算子(judge?a:b)を許容する スタイリッシュに書けて好きなので
         "padding-line-between-statements": [
             "error",
             {
@@ -66,7 +50,7 @@ module.exports = {
                 prev: "*",
                 next: "return",
             },
-        ],
+        ], // return文の前に空行を入れることを強制
         "@typescript-eslint/no-unused-vars": [
             "warn",
             // NOTE
@@ -77,7 +61,7 @@ module.exports = {
                 ignoreRestSiblings: false,
                 varsIgnorePattern: "_",
             },
-        ],
+        ], // "_"以外の名前の使用されていない変数を禁じる
         "import/extensions": [
             "error",
             "ignorePackages",
@@ -87,13 +71,13 @@ module.exports = {
                 ts: "never",
                 tsx: "never",
             },
-        ],
+        ], // インポート時にjs, jsx, ts, tsxのファイルであればファイル拡張子を省略する
         "react/jsx-filename-extension": [
             "error",
             {
                 extensions: [".jsx", ".tsx"],
             },
-        ],
+        ], // JSX のファイル拡張子を制限する eslint-config-airbnb で .jsx のみに限定されているので、.tsx を追加
         "react/jsx-props-no-spreading": [
             "error",
             {
@@ -101,8 +85,8 @@ module.exports = {
                 custom: "enforce",
                 explicitSpread: "ignore",
             },
-        ],
-        "react/react-in-jsx-scope": "off",
+        ], // props の記述にスプレッド構文を許さない eslint-config-airbnb にてすべて禁止されているが、<Foo {...{ bar, baz } /}> のように個々の props を明記する書き方のみ許容
+        "react/react-in-jsx-scope": "off", // JSX 記述を使用する場合に react モジュールを React としてインポートすることを強制 新しい JSX 変換形式を用いる場合はインポートが不要になるためこの設定を無効化
         "prefer-arrow/prefer-arrow-functions": [
             "error",
             {
@@ -110,20 +94,21 @@ module.exports = {
                 singleReturnOnly: false,
                 classPropertiesAllowed: false,
             },
-        ],
+        ], // 関数定義をアロー関数式に統一
         "react/function-component-definition": [
             "error",
             {
                 namedComponents: "arrow-function",
                 unnamedComponents: "arrow-function",
             },
-        ],
+        ], // 通常の関数だろうが無名関数だろうが、関数定義をfunction (props){...}ではなく、(props)=>{...}に統一する
     },
     overrides: [
         {
             files: ["*.tsx"],
             rules: {
-                "react/prop-types": "off",
+                "react/prop-types": "off", // コンポーネントの props に型チェックを行うための propTypes プロパティ19の定義を強制するルール。eslint-config-airbnb で設定されているが、TypeScript の場合は不要なのでファイル拡張子が .tsx の場合に無効化するよう設定を上書き
+                "react/require-default-props": "off", // ts+関数コンポーネントなので、default propsの警告は不要だし、デフォルト引数で書くと怒られるので
             },
         },
     ],
