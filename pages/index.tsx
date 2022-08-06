@@ -61,9 +61,23 @@ const Home: NextPage = () => (
                     </p>
                 </a>
             </div>
-            <Terminal>
-                <p>terminal??</p>
-            </Terminal>
+            <div className="flex flex-col gap-4">
+                <Terminal isDeletable>
+                    <div className="bg-orange-600 p-6 ">
+                        <p>deletable terminal</p>
+                    </div>
+                </Terminal>
+                <Terminal isMinimizable>
+                    <div className="bg-orange-600 p-6 ">
+                        <p>minimizable terminal</p>
+                    </div>
+                </Terminal>
+                <Terminal>
+                    <div className="bg-orange-600 p-6 ">
+                        <p>normal terminal</p>
+                    </div>
+                </Terminal>
+            </div>
         </main>
 
         <footer className={styles.footer}>
