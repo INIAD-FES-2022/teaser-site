@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useState } from "react";
+import React, { FC, ReactNode, useState, useCallback } from "react";
 import styles from "../styles/Terminal.module.scss";
 
 type Props = {
@@ -15,13 +15,30 @@ export const Terminal: FC<Props> = ({
     isMinimizable = false,
 }) => {
     // ターミナル風の何かに表示されている様な見た目にする
-    // sizeは指定がなければ"Medium"になる
     // TODO sizeの指定で大きさを調整出来るようにしたい
-    // isDeletable(default:false)がtrueなら×をクリックすることでこのコンポーネントは削除される
-    // isMinimize(default:false)がtrueなら_をクリックすると最小化?っぽい見た目になって、その状態で□をクリックすると元に戻る
+    // isDeletableがtrueなら×をクリックすることでこのコンポーネントは削除される
+    // isMinimizeがtrueなら_をクリックすると最小化?っぽい見た目になって、その状態で□をクリックすると元に戻る
 
     const [isDeleted, setIsDeleted] = useState(false);
+    const permittedSetIsDeleted = useCallback(
+        // 多分useCallbackをやる必要はないけれど、一応
+        (value: boolean) => {
+            if (isDeletable) {
+                setIsDeleted(value);
+            }
+        },
+        [isDeletable],
+    );
     const [isMinimize, setIsMinimize] = useState(false);
+    const permittedSetIsMinimize = useCallback(
+        // 多分useCallbackをやる必要はないけれど、一応
+        (value: boolean) => {
+            if (isMinimizable) {
+                setIsMinimize(value);
+            }
+        },
+        [isMinimizable],
+    );
 
     return (
         // NOTE 空のfragment(<></>)を使うな(isDeletedがtrueの時に空のfragment(<></>)になる)って怒られるけれど、
@@ -38,11 +55,7 @@ export const Terminal: FC<Props> = ({
                         <button
                             type="button"
                             className={`${styles.terminalTopX} flex h-full w-8 items-center justify-center`}
-                            onClick={() => {
-                                if (isDeletable) {
-                                    setIsDeleted(true);
-                                }
-                            }}
+                            onClick={() => permittedSetIsDeleted(true)}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -60,25 +73,16 @@ export const Terminal: FC<Props> = ({
                         </button>
                         <button
                             type="button"
-                            className="terminal-top--□ flex h-full w-8 items-center justify-center"
-                            onClick={() => {
-                                if (isMinimizable) {
-                                    setIsMinimize(false);
-                                }
-                            }}
+                            className={`${styles.terminalTopRestoreOriginalSize} flex h-full w-8 items-center justify-center`}
+                            onClick={() => permittedSetIsMinimize(false)}
                         >
                             <div className="m-1 border-2 border-solid border-white py-1 px-1.5" />
                         </button>
                         <button
                             type="button"
-                            className="terminal-top--_ flex h-full w-8 flex-col-reverse items-center"
-                            onClick={() => {
-                                if (isMinimizable) {
-                                    setIsMinimize(true);
-                                }
-                            }}
+                            className={`${styles.terminalTopMinimize} flex h-full w-8 flex-col-reverse items-center`}
+                            onClick={() => permittedSetIsMinimize(true)}
                         >
-                            {/* <div className="m-2 border-b-2 border-solid border-white" /> */}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -93,12 +97,6 @@ export const Terminal: FC<Props> = ({
                                     stroke="#FFF"
                                     strokeWidth={2}
                                 />
-                                {/* <path
-                                    fill="none"
-                                    stroke="#FFF"
-                                    strokeWidth={2}
-                                    d="M6,12 L18,12"
-                                /> */}
                             </svg>
                         </button>
                     </div>

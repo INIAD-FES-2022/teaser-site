@@ -37,5 +37,13 @@ $terminal__red--active: rgb(180, 13, 27);
                 background-color: $terminal__red--active;
             }
         }
+
+        &RestoreOriginalSize {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        }
+
+        &Minimize {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        }
     }
 }
