@@ -1,29 +1,23 @@
-$terminal__text-color--white: rgb(236, 236, 236);
-
-$terminal__black--darkest: rgb(30 42 54);
-$terminal__black--darker: rgb(56 72 92);
-$terminal__black--dark: rgb(72 92 112);
-$terminal__black--light: rgb(96 116 136);
-
 $terminal__red--hover: rgb(232, 17, 35);
 $terminal__red--active: rgb(180, 13, 27);
 
+
 .terminal {
-    color: $terminal__text-color--white;
-    background-color: $terminal__black--darkest;
+    color: var(--text-color__base--white);
+    background-color: var(--color__black--darkest);
     border-radius: 0.375rem; /* 6px */
 
     &Top {
-        background-color: $terminal__black--darker;
+        background-color: var(--color__black--darker);
         // border-top-left-radius: 0.375rem; /* 6px */
         // border-top-right-radius: 0.375rem; /* 6px */
 
         & > :hover {
-            background-color: $terminal__black--dark;
+            background-color: var(--color__black--dark);
         }
 
         & > :active {
-            background-color: $terminal__black--light;
+            background-color: var(--color__black--light);
         }
 
         &X {

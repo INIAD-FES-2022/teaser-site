@@ -2,7 +2,8 @@ import { NextComponentType, NextPageContext } from "next";
 import { ReactNode, FC } from "react";
 import type { AppProps } from "next/app";
 
-import "../styles/globals.css";
+import "../styles/colors.scss";
+import "../styles/globals.scss";
 
 type Props<P = Record<string, unknown>> = {
     Component: NextComponentType<NextPageContext, unknown, P>;
