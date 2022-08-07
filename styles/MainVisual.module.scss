@@ -1,0 +1,66 @@
+.container {
+    background-color: var(--color__black--darkest);
+}
+
+.looping {
+    hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+    &1 {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        & p {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+            color: rgb(207, 200, 156);
+        }
+    }
+    &0 {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        & p {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+            color: rgb(207, 156, 156);
+        }
+    }
+    &2 {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        & p {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+            color: rgb(177, 207, 156);
+        }
+    }
+    &3 {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        & p {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+            color: rgb(156, 207, 179);
+        }
+    }
+    &4 {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        & p {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+            color: rgb(156, 207, 203);
+        }
+    }
+    &5 {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        & p {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+            color: rgb(156, 180, 207);
+        }
+    }
+    &6 {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        & p {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+            color: rgb(170, 156, 207);
+        }
+    }
+    &7 {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+        & p {
+            hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+            color: rgb(189, 156, 207);
+        }
+    }
+    & p {
+        hoge: hoge; // 取り敢えずTerminal.module.scss.d.tsに型を生成させる為のもの
+    }
+}
