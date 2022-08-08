@@ -8,3 +8,4 @@ export const looping4: string;
 export const looping5: string;
 export const looping6: string;
 export const looping7: string;
+export const loopingContainer: string;
