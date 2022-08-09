@@ -47,9 +47,8 @@ export const MainVisual = () => {
 
                 <div className={`${styles.container}`} key={h}>
                     {loopDataList.map(({ style, ref }, i) => {
-                        const loopingClassName = styles[
-                            loopingClass[i] as keyof typeof styles
-                        ] as string;
+                        const loopingClassName =
+                            styles[loopingClass[i] as keyof typeof styles];
 
                         return (
                             <div
