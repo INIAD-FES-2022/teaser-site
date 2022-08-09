@@ -26,13 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # ビルドする
+      # ビルドして静的ファイルを出力する
       - name: Build
-        run: npm run build
-
-      # 静的ファイルを出力する
-      - name: Export
-        run: npm run export
+        run: npm run build && npm run export
 
       # GitHub Pages にデプロイする
       - name: Deploy
