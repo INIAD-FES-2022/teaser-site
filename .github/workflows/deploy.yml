@@ -27,8 +27,8 @@ jobs:
         run: npm ci
 
       # ビルドして静的ファイルを出力する
-      - name: Build
-        run: npm run build && npm run export
+      - name: Build & Export
+        run: npm run build-export
 
       # GitHub Pages にデプロイする
       - name: Deploy
