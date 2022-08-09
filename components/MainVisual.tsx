@@ -40,9 +40,9 @@ export const MainVisual = () => {
     // TODO クラスのあて方を整理する
     return (
         <div className={`${styles.outerContainer} relative h-screen w-screen`}>
-            {[...Array(4).keys()].map((h) => (
-                // 4回繰り返す
-                // 合計4 * 2 * 24 = 192個の"INIAD-FES"が並んでいることになる
+            {[...Array(6).keys()].map((h) => (
+                // 6回繰り返す
+                // 合計6 * 2 * 24 = 288個の"INIAD-FES"が並んでいることになる
                 // 流石にここまですれば、拡大縮小でデザインが崩れることは変なことをしない限り起こらないと信じたい
 
                 <div className={`${styles.container}`} key={h}>
