@@ -28,11 +28,11 @@ jobs:
 
       # ビルドする
       - name: Build
-        run: npm build
+        run: npm run build
 
       # 静的ファイルを出力する
       - name: Export
-        run: npm export
+        run: npm run export
 
       # GitHub Pages にデプロイする
       - name: Deploy
