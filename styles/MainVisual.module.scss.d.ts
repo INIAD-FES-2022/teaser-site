@@ -9,3 +9,5 @@ export const looping5: string;
 export const looping6: string;
 export const looping7: string;
 export const loopingContainer: string;
+export const outerContainer: string;
+export const scroll: string;

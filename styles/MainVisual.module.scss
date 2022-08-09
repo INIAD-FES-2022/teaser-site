@@ -1,14 +1,24 @@
 $base-length: 1rem;
 
-.container {
+.outerContainer {
     background-color: var(--color__black--darkest);
     overflow: hidden;
     word-break: keep-all;
-    position: relative;
+}
+
+.container {
+    position: absolute;
+    @for $i from 1 to 8 {
+        &:nth-child(#{$i}) {
+            top: 39 * $base-length * ($i - 1);
+        }
+    }
 }
 
 div.looping {
-    position: absolute;
+    &Container {
+        position: absolute;
+    }
 
     & p {
         color: var(--color__black--light);
@@ -18,7 +28,7 @@ div.looping {
     &0 {
         top: -1 * $base-length;
 
-        & div {
+        & div div {
             margin-left: 1 * $base-length;
             margin-right: 1 * $base-length;
 
@@ -33,7 +43,7 @@ div.looping {
         top: 6.3 * $base-length;
         animation: scroll 10s linear infinite;
 
-        & div {
+        & div div {
             margin-left: 0 * $base-length;
             margin-right: 0 * $base-length;
 
@@ -47,7 +57,7 @@ div.looping {
     &2 {
         top: 5.9 * $base-length;
 
-        & div {
+        & div div {
             margin-left: 1 * $base-length;
             margin-right: 1 * $base-length;
 
@@ -61,7 +71,7 @@ div.looping {
     &3 {
         top: 16.7 * $base-length;
 
-        & div {
+        & div div {
             margin-left: 0 * $base-length;
             margin-right: 0 * $base-length;
 
@@ -75,7 +85,7 @@ div.looping {
     &4 {
         top: 19.1 * $base-length;
 
-        & div {
+        & div div {
             margin-left: 0 * $base-length;
             margin-right: 0 * $base-length;
 
@@ -89,7 +99,7 @@ div.looping {
     &5 {
         top: 21.5 * $base-length;
 
-        & div {
+        & div div {
             margin-left: 0.5 * $base-length;
             margin-right: 0.5 * $base-length;
 
@@ -103,7 +113,7 @@ div.looping {
     &6 {
         top: 28.7 * $base-length;
 
-        & div {
+        & div div {
             margin-left: 0 * $base-length;
             margin-right: 0 * $base-length;
 
@@ -117,7 +127,7 @@ div.looping {
     &7 {
         top: 29.9 * $base-length;
 
-        & div {
+        & div div {
             margin-left: 1 * $base-length;
             margin-right: 1 * $base-length;
 
@@ -126,5 +136,14 @@ div.looping {
                 font-size: 10 * $base-length;
             }
         }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(var(--loopWidth) - 100vw);
+    }
+    100% {
+        transform: translateX(var(--loopWidth) - 100vw);
     }
 }
