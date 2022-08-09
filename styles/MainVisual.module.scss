@@ -1,7 +1,10 @@
+$base-length: 1rem;
+
 .container {
     background-color: var(--color__black--darkest);
     overflow: hidden;
     word-break: keep-all;
+    position: relative;
 }
 
 div.looping {
@@ -12,119 +15,115 @@ div.looping {
         line-height: 1;
     }
 
-    &Container {
-        position: relative;
-        hoge: hoge;
-    }
-
     &0 {
-        top: -1rem;
+        top: -1 * $base-length;
 
         & div {
-            margin-left: 1rem;
-            margin-right: 1rem;
+            margin-left: 1 * $base-length;
+            margin-right: 1 * $base-length;
 
             & p {
                 color: rgb(207, 156, 156);
-                font-size: 8rem;
+                font-size: 8 * $base-length;
             }
         }
     }
 
     &1 {
-        top: 6.3rem;
+        top: 6.3 * $base-length;
+        animation: scroll 10s linear infinite;
 
         & div {
-            margin-left: 0rem;
-            margin-right: 0rem;
+            margin-left: 0 * $base-length;
+            margin-right: 0 * $base-length;
 
             & p {
                 color: rgb(207, 200, 156);
-                font-size: 2rem;
+                font-size: 2 * $base-length;
             }
         }
     }
 
     &2 {
-        top: 5.9rem;
+        top: 5.9 * $base-length;
 
         & div {
-            margin-left: 1rem;
-            margin-right: 1rem;
+            margin-left: 1 * $base-length;
+            margin-right: 1 * $base-length;
 
             & p {
                 color: rgb(177, 207, 156);
-                font-size: 12rem;
+                font-size: 12 * $base-length;
             }
         }
     }
 
     &3 {
-        top: 16.7rem;
+        top: 16.7 * $base-length;
 
         & div {
-            margin-left: 0rem;
-            margin-right: 0rem;
+            margin-left: 0 * $base-length;
+            margin-right: 0 * $base-length;
 
             & p {
                 color: rgb(156, 207, 179);
-                font-size: 3rem;
+                font-size: 3 * $base-length;
             }
         }
     }
 
     &4 {
-        top: 19.1rem;
+        top: 19.1 * $base-length;
 
         & div {
-            margin-left: 0rem;
-            margin-right: 0rem;
+            margin-left: 0 * $base-length;
+            margin-right: 0 * $base-length;
 
             & p {
                 color: rgb(156, 192, 207);
-                font-size: 4rem;
+                font-size: 4 * $base-length;
             }
         }
     }
 
     &5 {
-        top: 21.5rem;
+        top: 21.5 * $base-length;
 
         & div {
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
+            margin-left: 0.5 * $base-length;
+            margin-right: 0.5 * $base-length;
 
             & p {
                 color: rgb(156, 180, 207);
-                font-size: 8rem;
+                font-size: 8 * $base-length;
             }
         }
     }
 
     &6 {
-        top: 28.7rem;
+        top: 28.7 * $base-length;
 
         & div {
-            margin-left: 0rem;
-            margin-right: 0rem;
+            margin-left: 0 * $base-length;
+            margin-right: 0 * $base-length;
 
             & p {
                 color: rgb(170, 156, 207);
-                font-size: 3rem;
+                font-size: 3 * $base-length;
             }
         }
     }
 
     &7 {
-        top: 29.9rem;
+        top: 29.9 * $base-length;
 
         & div {
-            margin-left: 1rem;
-            margin-right: 1rem;
+            margin-left: 1 * $base-length;
+            margin-right: 1 * $base-length;
 
             & p {
                 color: rgb(189, 156, 207);
-                font-size: 10rem;
+                font-size: 10 * $base-length;
             }
         }
     }
