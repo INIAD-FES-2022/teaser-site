@@ -2,7 +2,7 @@ import { NextComponentType, NextPageContext } from "next";
 import { ReactNode, FC } from "react";
 import type { AppProps } from "next/app";
 
-import "../styles/colors.scss";
+import "../styles/variables.scss";
 import "../styles/globals.scss";
 
 type Props<P = Record<string, unknown>> = {
