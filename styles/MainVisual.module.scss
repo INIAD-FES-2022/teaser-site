@@ -8,12 +8,15 @@ $base-length: 1rem;
 
 .container {
     position: absolute;
+
     @for $i from 1 to 8 {
         &:nth-child(#{$i}) {
             top: 39 * $base-length * ($i - 1);
         }
     }
 }
+
+// TODO mixin等を利用して整理したい
 
 div.looping {
     &Container {
@@ -41,7 +44,6 @@ div.looping {
 
     &1 {
         top: 6.3 * $base-length;
-        animation: scroll 10s linear infinite;
 
         & div div {
             margin-left: 0 * $base-length;
@@ -51,6 +53,14 @@ div.looping {
                 color: rgb(207, 200, 156);
                 font-size: 2 * $base-length;
             }
+        }
+
+        & > div:nth-child(1) {
+            animation: scroll 20s linear infinite;
+        }
+
+        & > div:nth-child(2) {
+            animation: scroll 20s linear infinite;
         }
     }
 
@@ -141,9 +151,10 @@ div.looping {
 
 @keyframes scroll {
     0% {
-        transform: translateX(var(--loopWidth) - 100vw);
+        transform: translate(-1rem);
     }
+
     100% {
-        transform: translateX(var(--loopWidth) - 100vw);
+        transform: translate(calc((-1 * var(--loop-width)) - 1rem));
     }
 }
