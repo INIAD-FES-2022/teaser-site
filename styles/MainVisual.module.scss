@@ -18,6 +18,34 @@ $base-length: 1rem;
 
 // TODO mixin等を利用して整理したい
 
+@mixin scroll-mixin(
+    $top: 0,
+    $margin: 0,
+    $fontSize: 0,
+    $duration: 0s,
+    $color: #FFF
+) {
+    top: $top * $base-length;
+
+    & div div {
+        margin-left: $margin * $base-length;
+        margin-right: $margin * $base-length;
+
+        & p {
+            color: $color;
+            font-size: $fontSize * $base-length;
+        }
+    }
+
+    & > div:nth-child(1) {
+        animation: scroll $duration linear infinite;
+    }
+
+    & > div:nth-child(2) {
+        animation: scroll $duration linear infinite;
+    }
+}
+
 div.looping {
     &Container {
         position: absolute;
@@ -29,123 +57,35 @@ div.looping {
     }
 
     &0 {
-        top: -1 * $base-length;
-
-        & div div {
-            margin-left: 1 * $base-length;
-            margin-right: 1 * $base-length;
-
-            & p {
-                color: rgb(207, 156, 156);
-                font-size: 8 * $base-length;
-            }
-        }
+        @include scroll-mixin(-1, 1, 8, 50s, rgb(207, 156, 156));
     }
 
     &1 {
-        top: 6.3 * $base-length;
-
-        & div div {
-            margin-left: 0 * $base-length;
-            margin-right: 0 * $base-length;
-
-            & p {
-                color: rgb(207, 200, 156);
-                font-size: 2 * $base-length;
-            }
-        }
-
-        & > div:nth-child(1) {
-            animation: scroll 20s linear infinite;
-        }
-
-        & > div:nth-child(2) {
-            animation: scroll 20s linear infinite;
-        }
+        @include scroll-mixin(6.3, 0, 2, 20s, rgb(207, 200, 156));
     }
 
     &2 {
-        top: 5.9 * $base-length;
-
-        & div div {
-            margin-left: 1 * $base-length;
-            margin-right: 1 * $base-length;
-
-            & p {
-                color: rgb(177, 207, 156);
-                font-size: 12 * $base-length;
-            }
-        }
+        @include scroll-mixin(5.9, 1, 12, 30s, rgb(177, 207, 156));
     }
 
     &3 {
-        top: 16.7 * $base-length;
-
-        & div div {
-            margin-left: 0 * $base-length;
-            margin-right: 0 * $base-length;
-
-            & p {
-                color: rgb(156, 207, 179);
-                font-size: 3 * $base-length;
-            }
-        }
+        @include scroll-mixin(16.7, 0, 3, 70s, rgb(156, 207, 179));
     }
 
     &4 {
-        top: 19.1 * $base-length;
-
-        & div div {
-            margin-left: 0 * $base-length;
-            margin-right: 0 * $base-length;
-
-            & p {
-                color: rgb(156, 192, 207);
-                font-size: 4 * $base-length;
-            }
-        }
+        @include scroll-mixin(19.1, 0, 4, 70s, rgb(156, 192, 207));
     }
 
     &5 {
-        top: 21.5 * $base-length;
-
-        & div div {
-            margin-left: 0.5 * $base-length;
-            margin-right: 0.5 * $base-length;
-
-            & p {
-                color: rgb(156, 180, 207);
-                font-size: 8 * $base-length;
-            }
-        }
+        @include scroll-mixin(21.5, 0.5, 8, 70s, rgb(156, 180, 207));
     }
 
     &6 {
-        top: 28.7 * $base-length;
-
-        & div div {
-            margin-left: 0 * $base-length;
-            margin-right: 0 * $base-length;
-
-            & p {
-                color: rgb(170, 156, 207);
-                font-size: 3 * $base-length;
-            }
-        }
+        @include scroll-mixin(28.7, 0, 3, 70s, rgb(170, 156, 207));
     }
 
     &7 {
-        top: 29.9 * $base-length;
-
-        & div div {
-            margin-left: 1 * $base-length;
-            margin-right: 1 * $base-length;
-
-            & p {
-                color: rgb(189, 156, 207);
-                font-size: 10 * $base-length;
-            }
-        }
+        @include scroll-mixin(29.9, 1, 10, 70s, rgb(189, 156, 207));
     }
 }
 
