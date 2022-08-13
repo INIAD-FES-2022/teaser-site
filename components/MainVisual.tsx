@@ -39,7 +39,7 @@ export const MainVisual = () => {
 
     // TODO クラスのあて方を整理する
     return (
-        <div className={`${styles.outerContainer} relative h-screen w-screen`}>
+        <div className={`${styles.outerContainer} relative h-screen w-full`}>
             {[...Array(6).keys()].map((h) => (
                 // 6回繰り返す
                 // 合計6 * 8 * 3 * 24 = 3456個の"INIAD-FES"が並んでいることになる
