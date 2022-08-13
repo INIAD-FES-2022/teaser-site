@@ -39,10 +39,10 @@ export const MainVisual = () => {
 
     // TODO クラスのあて方を整理する
     return (
-        <div className={`${styles.outerContainer} relative h-screen w-screen`}>
+        <div className={`${styles.outerContainer} relative h-screen w-full`}>
             {[...Array(6).keys()].map((h) => (
                 // 6回繰り返す
-                // 合計6 * 2 * 24 = 288個の"INIAD-FES"が並んでいることになる
+                // 合計6 * 8 * 3 * 24 = 3456個の"INIAD-FES"が並んでいることになる
                 // 流石にここまですれば、拡大縮小でデザインが崩れることは変なことをしない限り起こらないと信じたい
 
                 <div className={`${styles.container}`} key={h}>
@@ -53,15 +53,18 @@ export const MainVisual = () => {
                         return (
                             <div
                                 key={i}
-                                className={`${loopingClassName} ${styles.loopingContainer} flex gap-4`}
+                                className={`${loopingClassName} ${styles.loopingContainer} flex`}
                             >
-                                {[...Array(2).keys()].map((j) => (
+                                {[...Array(3).keys()].map((j) => (
                                     // 2回繰り返しているだけ
                                     // アニメーションのことを考えると、1つでは連続して流れている様には見えないだろうから、2つに増やして上手いこと動かしてなんとかする
                                     // refは上書きされて1つ目のものではなく2つ目のloopElementsだけにあたっているけれど、横幅は同じ筈なので問題はないと思う
+
+                                    // REVIEW 何故かnext exportしてデプロイすると最後の要素が消える!!
+                                    // 取り敢えずは要素を3つにすることで3-1=2って感じに対応するけれど、原因を探りたい
                                     <div
                                         ref={ref}
-                                        className={`${styles.looping} flex flex-nowrap gap-4`}
+                                        className={`${styles.looping} flex flex-nowrap gap-4 pl-4`}
                                         key={`${i}-${j}`}
                                         style={style}
                                     >
