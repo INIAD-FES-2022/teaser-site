@@ -1,37 +1,25 @@
-$base-length: 1rem;
+$base-length: calc(100vh / 34);
 
-.outerContainer {
+.container {
     background-color: var(--color__black--darkest);
     overflow: hidden;
     word-break: keep-all;
 }
-
-.container {
-    position: absolute;
-
-    @for $i from 1 to 8 {
-        &:nth-child(#{$i}) {
-            top: 39 * $base-length * ($i - 1);
-        }
-    }
-}
-
-// TODO mixin等を利用して整理したい
 
 @mixin scroll-mixin(
     $top: 0,
     $margin: 0,
     $fontSize: 0,
     $duration: 0s,
-    $color: #FFF
+    $color: #fff
 ) {
     top: $top * $base-length;
 
-    & div div {
+    & div > p {
         margin-left: $margin * $base-length;
         margin-right: $margin * $base-length;
 
-        & p {
+        & > span {
             color: $color;
             font-size: $fontSize * $base-length;
         }
@@ -51,7 +39,7 @@ div.looping {
         position: absolute;
     }
 
-    & p {
+    & > p {
         color: var(--color__black--light);
         line-height: 1;
     }
@@ -69,7 +57,7 @@ div.looping {
     }
 
     &3 {
-        @include scroll-mixin(16.7, 0, 3, 70s, rgb(156, 207, 179));
+        @include scroll-mixin(16.7, 0, 3, 40s, rgb(156, 207, 179));
     }
 
     &4 {
@@ -91,10 +79,11 @@ div.looping {
 
 @keyframes scroll {
     0% {
-        transform: translate(-1rem);
+        transform: translate(-4rem);
+        // 要素の左にpaddingが1remあるので、初期位置は-1rem以下にしないと上手く見えない
     }
 
     100% {
-        transform: translate(calc((-1 * var(--loop-width)) - 1rem));
+        transform: translate(calc((-1 * var(--loop-width)) - 4rem));
     }
 }
