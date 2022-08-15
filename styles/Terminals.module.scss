@@ -1,0 +1,49 @@
+.mainContent {
+    // background-color: rgb(253 186 116);
+    background: url("/images/背景_base.svg") rgb(186, 79, 13) repeat;
+}
+
+.title {
+    top: calc(100% / 4);
+    color: #c86464;
+}
+.matsu {
+    // top: calc(100% / 4 + 1rem);
+    bottom: 10%;
+    left: calc(50% - (30% / 2));
+
+    & path {
+        fill: rgb(191, 235, 156);
+        stroke: #333333;
+        stroke-width: 4px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-opacity: 1;
+        &.red {
+            fill: rgb(235, 159, 156);
+        }
+        &.yellow {
+            fill: rgb(235, 231, 156);
+        }
+        &.green {
+            fill: rgb(156, 235, 164);
+        }
+        &.gray {
+            fill: rgb(182, 182, 182);
+        }
+        &.blue {
+            fill: rgb(76, 115, 255);
+        }
+    }
+}
+
+.hexagon {
+    fill: rgb(149, 36, 36);
+    &Stroke {
+        stroke: #ffb700;
+        stroke-width: 2px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-opacity: 1;
+    }
+}
