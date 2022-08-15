@@ -4,6 +4,7 @@ import styles from "../styles/Terminal.module.scss";
 type Props = {
     children: ReactNode;
     size?: "Small" | "Medium" | "Large";
+    className?: string;
     isDeletable?: boolean;
     isMinimizable?: boolean;
 };
@@ -11,6 +12,7 @@ type Props = {
 export const Terminal: FC<Props> = ({
     children,
     size = "Medium",
+    className = "",
     isDeletable = false,
     isMinimizable = false,
 }) => {
@@ -46,7 +48,7 @@ export const Terminal: FC<Props> = ({
         // eslint-disable-next-line react/jsx-no-useless-fragment
         <>
             {!isDeleted && (
-                <div className={`${styles.terminal} flex flex-col`}>
+                <div className={`${className} ${styles.terminal} flex flex-col`}>
                     <div
                         className={`${styles.terminalTop} ${
                             isMinimize ? "rounded-md" : "rounded-t-md"
