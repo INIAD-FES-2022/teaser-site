@@ -12,7 +12,7 @@ export const Terminals = () => {
                 <div className="flex justify-center">
                     <Terminal className="flex">
                         <div className="relative text-center">
-                            <div className="w-32">
+                            <div className="w-42">
                                 <svg
                                     width="100%"
                                     height="100%"
@@ -36,8 +36,8 @@ export const Terminals = () => {
                                 <div
                                     className={`${styles.title} absolute w-full`}
                                 >
-                                    <p>第6回</p>
-                                    <p>INIAD-FES</p>
+                                    <p className="text-2xl">第6回</p>
+                                    <p className="mt-1 text-4xl">INIAD-FES</p>
                                 </div>
                                 <svg
                                     version="1.1"

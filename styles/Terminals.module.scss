@@ -5,11 +5,11 @@
 
 .title {
     top: calc(100% / 4);
-    color: #c86464;
+    color: #e4b654;
 }
 .matsu {
     // top: calc(100% / 4 + 1rem);
-    bottom: 10%;
+    bottom: 20%;
     left: calc(50% - (30% / 2));
 
     & path {
@@ -38,9 +38,9 @@
 }
 
 .hexagon {
-    fill: rgb(149, 36, 36);
+    fill: rgb(35, 11, 11);
     &Stroke {
-        stroke: #ffb700;
+        stroke: #e4b654;
         stroke-width: 2px;
         stroke-linejoin: round;
         stroke-linecap: round;
