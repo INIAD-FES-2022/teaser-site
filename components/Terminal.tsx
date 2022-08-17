@@ -103,7 +103,7 @@ export const Terminal: FC<Props> = ({
                         </button>
                     </div>
                     {!isMinimize && (
-                        <div className="terminal-content p-1">{children}</div>
+                        <div className="terminal-content p-1 h-full">{children}</div>
                     )}
                 </div>
             )}
