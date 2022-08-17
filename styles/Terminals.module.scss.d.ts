@@ -6,5 +6,7 @@ export const hexagonStroke: string;
 export const mainContent: string;
 export const matsu: string;
 export const red: string;
+export const ribbon: string;
+export const ribbonContent: string;
 export const title: string;
 export const yellow: string;

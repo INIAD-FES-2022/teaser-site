@@ -47,3 +47,15 @@
         stroke-opacity: 1;
     }
 }
+
+.ribbon {
+    width: 56rem;
+    height: 10rem;
+    top: -14.5rem;
+    left: calc(-1 * (56rem / 2));
+    &Content {
+        background: url("/images/japanesePattern05.svg") rgb(118, 9, 27) repeat;
+        width: 100%;
+        height: 100%;
+    }
+}

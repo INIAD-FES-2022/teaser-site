@@ -9,27 +9,27 @@ export const Terminals = () => {
     return (
         <Terminal>
             <div className={`${styles.mainContent} flex flex-col p-4`}>
-                <div className="flex justify-center">
-                    <Terminal className="flex">
+                <div className="flex flex-col items-center">
+                    <Terminal className="z-10 flex">
                         <div className="relative text-center">
                             <div className="w-42">
                                 <svg
                                     width="100%"
                                     height="100%"
-                                    viewBox="-150 -150 300 300"
+                                    viewBox="-150 -150 260 300"
                                     version="1.1"
                                     id="svg4"
                                     xmlns="http://www.w3.org/2000/svg"
                                     className={`${styles.hexagon}`}
                                 >
                                     <path
-                                        d="M130 75 L0 150 L-130 75 L-130 -75 L-0 -150 L130 -75 z"
+                                        d="M 110,75 -20,150 -150,75 V -75 l 130,-75 130,75 z"
                                         id="path2"
                                     />
                                     <path
-                                        d="M 124.01292,71.430914 4.7010769e-4,142.86133 -124.0129,71.430914 V -71.42995 L 4.7010769e-4,-142.86041 124.01292,-71.42995 Z"
+                                        d="M 104.01292,71.430914 -19.99953,142.86133 -144.0129,71.430914 V -71.42995 l 124.01337,-71.43046 124.01245,71.43046 z"
                                         id="path2-1"
-                                        // style="stroke:#ffb700;stroke-width:2;"
+                                        // style="stroke:#ffb700;stroke-width:2"
                                         className={`${styles.hexagonStroke}`}
                                     />
                                 </svg>
@@ -39,6 +39,7 @@ export const Terminals = () => {
                                     <p className="text-2xl">第6回</p>
                                     <p className="mt-1 text-4xl">INIAD-FES</p>
                                 </div>
+                                {/* TODO svgは後でコンポーネントに切り出そう */}
                                 <svg
                                     version="1.1"
                                     id="svg2"
@@ -1171,6 +1172,11 @@ export const Terminals = () => {
                             </div>
                         </div>
                     </Terminal>
+                    <div className="relative">
+                        <Terminal className={`${styles.ribbon} absolute`}>
+                            <div className={`${styles.ribbonContent}`} />
+                        </Terminal>
+                    </div>
                 </div>
             </div>
         </Terminal>
