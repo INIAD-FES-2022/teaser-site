@@ -1,0 +1,10 @@
+.hexagon {
+    fill: rgb(35, 11, 11);
+    &Stroke {
+        stroke: #e4b654;
+        stroke-width: 2px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-opacity: 1;
+    }
+}
