@@ -1,3 +1,29 @@
+.matsu {
+    & path {
+        fill: rgb(191, 235, 156);
+        stroke: #333333;
+        stroke-width: 4px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-opacity: 1;
+        &.red {
+            fill: rgb(235, 159, 156);
+        }
+        &.yellow {
+            fill: rgb(235, 231, 156);
+        }
+        &.green {
+            fill: rgb(156, 235, 164);
+        }
+        &.gray {
+            fill: rgb(182, 182, 182);
+        }
+        &.blue {
+            fill: rgb(76, 115, 255);
+        }
+    }
+}
+
 .hexagon {
     fill: rgb(35, 11, 11);
     &Stroke {
