@@ -16,13 +16,17 @@ export const Terminals = () => {
                     <Terminal className="z-10 flex">
                         <div className="relative text-center">
                             <div className="w-42">
-                                <Hexagon className={`${styles.hexagon}`}/>
-                                <div
+                                <Hexagon className={`${styles.hexagon}`} />
+                                <h2
                                     className={`${styles.title} absolute w-full`}
                                 >
-                                    <p className="text-2xl">第6回</p>
-                                    <p className="mt-1 text-4xl">INIAD-FES</p>
-                                </div>
+                                    <span className="block text-2xl">
+                                        第6回
+                                    </span>
+                                    <span className="mt-1 text-4xl">
+                                        INIAD-FES
+                                    </span>
+                                </h2>
                                 <Matsu className={`${styles.matsu} absolute`} />
                             </div>
                         </div>
@@ -35,30 +39,82 @@ export const Terminals = () => {
                         </Terminal>
                     </div>
                     <div className="mx-8 mt-4 flex w-full justify-between gap-4">
-                        <Terminal>
-                            <Image
-                                src="/images/壁掛け.svg"
-                                alt=""
-                                width={128}
-                                height={256}
-                            />
-                        </Terminal>
-                        <Terminal className={`${styles.aboutFes}`}>
-                            <div className={`${styles.aboutFesContent} h-full`}>
-                                <h2 className="">INIAD-FESとは</h2>
-                                <p className="break-words">
-                                    {"hoge".repeat(224)}
-                                </p>
+                        <div className="flex flex-col gap-4">
+                            <Terminal>
+                                <Image
+                                    src="/images/壁掛け.svg"
+                                    alt=""
+                                    width={128}
+                                    height={256}
+                                />
+                            </Terminal>
+                            <Terminal>
+                                <Image
+                                    src="/images/提灯1.svg"
+                                    alt=""
+                                    width={128}
+                                    height={128}
+                                />
+                            </Terminal>
+                        </div>
+                        <div
+                            className={`${styles.aboutFesContainer} flex flex-col gap-4`}
+                        >
+                            <Terminal className={`${styles.aboutFes}`}>
+                                <article
+                                    className={`${styles.aboutFesContent} h-full p-4`}
+                                >
+                                    <h2 className="text-2xl">INIAD-FESとは</h2>
+                                    <p className="break-words">
+                                        {"hoge".repeat(224)}
+                                    </p>
+                                </article>
+                            </Terminal>
+                            <div className="flex justify-evenly">
+                                <Terminal>
+                                    <Image
+                                        src="/images/扇子.svg"
+                                        alt=""
+                                        width={128}
+                                        height={128}
+                                    />
+                                </Terminal>
+                                <Terminal>
+                                    <Image
+                                        src="/images/扇子.svg"
+                                        alt=""
+                                        width={128}
+                                        height={128}
+                                    />
+                                </Terminal>
+                                <Terminal>
+                                    <Image
+                                        src="/images/扇子.svg"
+                                        alt=""
+                                        width={128}
+                                        height={128}
+                                    />
+                                </Terminal>
                             </div>
-                        </Terminal>
-                        <Terminal>
-                            <Image
-                                src="/images/壁掛け.svg"
-                                alt=""
-                                width={128}
-                                height={256}
-                            />
-                        </Terminal>
+                        </div>
+                        <div className="flex flex-col gap-4">
+                            <Terminal>
+                                <Image
+                                    src="/images/壁掛け.svg"
+                                    alt=""
+                                    width={128}
+                                    height={256}
+                                />
+                            </Terminal>
+                            <Terminal>
+                                <Image
+                                    src="/images/提灯1.svg"
+                                    alt=""
+                                    width={128}
+                                    height={128}
+                                />
+                            </Terminal>
+                        </div>
                     </div>
                 </div>
             </div>
