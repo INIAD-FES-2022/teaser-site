@@ -1,4 +1,5 @@
 export const aboutFes: string;
+export const aboutFesContainer: string;
 export const aboutFesContent: string;
 export const hexagon: string;
 export const mainContent: string;

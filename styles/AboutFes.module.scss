@@ -31,7 +31,10 @@
 }
 
 .aboutFes {
-    width: calc(100% - 16rem);
+    &Container {
+        width: calc(100% - 16rem);
+    }
+    hoge: hoge;
     &Content {
         background: url("/images/背景_base.svg") rgba(186, 79, 13, 0.8) repeat;
     }

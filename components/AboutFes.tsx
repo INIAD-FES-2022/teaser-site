@@ -2,7 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import styles from "../styles/Terminals.module.scss";
+import styles from "../styles/AboutFes.module.scss";
 import { Terminal } from "./Terminal";
 import { Matsu, Hexagon } from "./svg/svg";
 
