@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import { Terminal } from "../components/Terminal";
 import { MainVisual } from "../components/MainVisual";
-import { Terminals } from "../components/Terminals";
+import { AboutFes } from "../components/AboutFes";
 
 const Home: NextPage = () => (
     <div className={styles.container}>
@@ -17,7 +17,7 @@ const Home: NextPage = () => (
         <main className={styles.main}>
             <MainVisual />
 
-            <Terminals />
+            <AboutFes />
 
             <div id="terminals" className="flex flex-col gap-4">
                 <Terminal isDeletable>
