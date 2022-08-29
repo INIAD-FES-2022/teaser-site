@@ -1,18 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="_レイヤー_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.26 337.25">
-    <defs>
-        <style>.cls-1{fill:#fff;}.cls-2{fill:#e0c9a6;}.cls-2,.cls-3{stroke:#653c12;stroke-miterlimit:10;}.cls-4{fill:#653c12;}.cls-3{fill:none;}</style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="_レイヤー_1" viewBox="0 0 169.99993 337.25" version="1.1" width="169.99992" height="337.25"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs158">
+        <style id="style156">
+            .cls-1 {
+                fill: #fff;
+            }
+
+            .cls-2 {
+                fill: #e0c9a6;
+            }
+
+            .cls-2,
+            .cls-3 {
+                stroke: #653c12;
+                stroke-miterlimit: 10;
+            }
+
+            .cls-4 {
+                fill: #653c12;
+            }
+
+            .cls-3 {
+                fill: none;
+            }
+        </style>
     </defs>
-    <path class="cls-2" d="M161.56,94.54c-14.69-30.9-57.6-37.14-62.84-37.83h-30.2c-5.23,.69-48.14,6.94-62.84,37.83-16.43,34.54,6.32,91.68,65.61,117.28h24.65c59.3-25.61,82.04-82.74,65.61-117.28Z" />
-    <path class="cls-2" d="M138.96,94.54c-10.43-30.9-40.9-37.14-44.61-37.83h-21.44c-3.71,.69-34.18,6.94-44.61,37.83-11.66,34.54,4.48,91.68,46.58,117.28h17.5c42.1-25.61,58.25-82.74,46.58-117.28Z" />
-    <path class="cls-2" d="M113.7,94.54c-5.67-30.9-22.23-37.14-24.25-37.83h-11.65c-2.02,.69-18.58,6.94-24.25,37.83-6.34,34.54,2.44,91.68,25.32,117.28h9.51c22.88-25.61,31.66-82.74,25.32-117.28Z" />
-    <rect class="cls-4" x="68.87" y="211.06" width="29.51" height="5.26" />
-    <rect class="cls-1" x="68.87" y="216.03" width="29.51" height="1.37" />
-    <rect class="cls-4" x="68.87" y="52.17" width="29.51" height="5.26" />
-    <rect class="cls-4" x="71.9" y="47.63" width="23.46" height="5.26" />
-    <rect class="cls-4" x="68.87" y="217.54" width="29.51" height="5.26" />
-    <rect class="cls-4" x="77.73" y="222.79" width="11.79" height="3.78" />
-    <rect class="cls-4" x="83.01" y="223.87" width="1.23" height="113.38" />
-    <rect class="cls-4" x="83.01" width="2.1" height="47.94" />
-    <circle class="cls-3" cx="83.63" cy="47.4" r="3.23" />
+    <path class="cls-2"
+        d="M 164.21757,94.332085 C 149.28761,63.433707 105.67674,57.194033 100.35115,56.504065 H 69.657882 C 64.342456,57.194033 20.731584,63.443707 5.7914765,94.332085 -10.906887,128.87028 12.214703,186.00729 72.473125,211.60594 h 25.05262 C 157.79434,185.99729 180.90577,128.87028 164.20738,94.332085 Z"
+        id="path160" style="stroke-width:1.00813" />
+    <path class="cls-2"
+        d="M 145.44397,94.341542 C 134.04955,63.450518 100.76216,57.212331 96.709105,56.522532 H 73.286663 c -4.053046,0.689799 -37.34045,6.937984 -48.734859,37.81901 -12.73814,34.529958 4.894243,91.653368 50.887014,117.245928 H 94.556953 C 140.54972,185.98491 158.19303,128.8715 145.44397,94.341542 Z"
+        id="path162" style="stroke-width:1.04506" />
+    <path class="cls-2"
+        d="M 117.3269,94.549384 C 111.23239,63.656682 93.432558,57.418156 91.261322,56.728319 H 78.739096 C 76.56786,57.418156 58.768027,63.66668 52.673518,94.549384 45.858847,129.08122 55.296199,186.20773 79.889206,211.80168 H 90.111212 C 114.70422,186.19773 124.14157,129.08122 117.3269,94.549384 Z"
+        id="path164" style="stroke-width:1.03664" />
+    <rect class="cls-4" x="70" y="211.06" width="30" height="5.2600002" id="rect166" style="stroke-width:1.00827" />
+    <rect class="cls-1" x="70" y="216.03" width="30" height="2" id="rect168" style="stroke-width:1.21824" />
+    <rect class="cls-4" x="70" y="52.169998" width="30" height="5.2600002" id="rect170" style="stroke-width:1.00827" />
+    <rect class="cls-4" x="73" y="47.630001" width="24" height="5.2600002" id="rect172" style="stroke-width:1.01144" />
+    <rect class="cls-4" x="70" y="217.53999" width="30" height="5.2600002" id="rect174" style="stroke-width:1.00827" />
+    <rect class="cls-4" x="79" y="222.78999" width="12" height="4" id="rect176" style="stroke-width:1.03781" />
+    <rect class="cls-4" x="84.5" y="223.87" width="1" height="113.38" id="rect178" style="stroke-width:0.90167" />
+    <rect class="cls-4" x="84" width="2" height="47.939999" id="rect180" y="0" style="stroke-width:0.9759" />
+    <ellipse class="cls-3" cx="85" cy="47.670002" id="circle182" rx="2.9986103" ry="3.4986107"
+        style="stroke-width:1.00278" />
 </svg>

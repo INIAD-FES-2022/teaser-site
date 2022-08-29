@@ -48,7 +48,7 @@ export const Terminal: FC<Props> = ({
         // eslint-disable-next-line react/jsx-no-useless-fragment
         <>
             {!isDeleted && (
-                <div className={`${className} ${styles.terminal} flex flex-col`}>
+                <div className={`${className} ${styles.terminal} flex flex-col mx-1`}>
                     <div
                         className={`${styles.terminalTop} ${
                             isMinimize ? "rounded-md" : "rounded-t-md"

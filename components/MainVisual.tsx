@@ -49,42 +49,42 @@ export const MainVisual = () => {
                 合計1 * 8 * 3 * 12 = 288個の"INIAD-FES"が並んでいることになる */}
 
             {/* <div className={`${styles.container}`}> */}
-                {loopDataList.map(({ style, ref }, i) => {
-                    const loopingClassName =
-                        styles[loopingClass[i] as keyof typeof styles];
+            {loopDataList.map(({ style, ref }, i) => {
+                const loopingClassName =
+                    styles[loopingClass[i] as keyof typeof styles];
 
-                    return (
-                        <div
-                            key={i}
-                            className={`${loopingClassName} ${styles.loopingContainer} flex`}
-                        >
-                            {[...Array(3).keys()].map((j) => (
-                                // REVIEW 何故かnext exportしてデプロイすると最後の要素が消える!!
-                                // 取り敢えずは要素を3つにすることで3-1=2って感じに対応するけれど、原因を探りたい
+                return (
+                    <div
+                        key={i}
+                        className={`${loopingClassName} ${styles.loopingContainer} flex`}
+                    >
+                        {[...Array(3).keys()].map((j) => (
+                            // REVIEW 何故かnext exportしてデプロイすると最後の要素が消える!!
+                            // 取り敢えずは要素を3つにすることで3-1=2って感じに対応するけれど、原因を探りたい
 
-                                // 2回繰り返しているだけ
-                                // アニメーションのことを考えると、1つでは連続して流れている様には見えないだろうから、2つに増やして上手いこと動かしてなんとかする
-                                // refは上書きされて1つ目のものではなく2つ目のloopElementsだけにあたっているけれど、横幅は同じ筈なので問題はないと思う
+                            // 2回繰り返しているだけ
+                            // アニメーションのことを考えると、1つでは連続して流れている様には見えないだろうから、2つに増やして上手いこと動かしてなんとかする
+                            // refは上書きされて1つ目のものではなく2つ目のloopElementsだけにあたっているけれど、横幅は同じ筈なので問題はないと思う
 
-                                <div
-                                    ref={ref}
-                                    className={`${styles.looping} flex flex-nowrap gap-4 pl-4`}
-                                    key={`${i}-${j}`}
-                                    style={style}
-                                >
-                                    {[...Array(12).keys()].map((k) => (
-                                        // 12列
-                                        <p className="flex" key={k}>
-                                            <span>INIAD-</span>
-                                            <span>FES</span>
-                                            {/* <p>INIAD-fes</p>では"-"のところで改行が入ってしまうので、flexで横並びにしている */}
-                                        </p>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
-                    );
-                })}
+                            <div
+                                ref={ref}
+                                className={`${styles.looping} flex flex-nowrap gap-4 pl-4`}
+                                key={`${i}-${j}`}
+                                style={style}
+                            >
+                                {[...Array(12).keys()].map((k) => (
+                                    // 12列
+                                    <p className="flex" key={k}>
+                                        <span>INIAD-</span>
+                                        <span>FES</span>
+                                        {/* <p>INIAD-fes</p>では"-"のところで改行が入ってしまうので、flexで横並びにしている */}
+                                    </p>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                );
+            })}
             {/* </div> */}
         </article>
     );

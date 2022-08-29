@@ -27,3 +27,9 @@
     height: 128px;
     margin-left: 0.5rem;
 }
+
+.mainContent {
+    // background-color: rgb(253 186 116);
+    background: url("/images/背景_base.svg") rgb(186, 79, 13) repeat;
+    overflow-wrap: break-word;
+}

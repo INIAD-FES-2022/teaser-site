@@ -37,7 +37,7 @@ module.exports = {
     ],
     root: true,
     rules: {
-        "react/no-array-index-key": "off", // 今回は制的なサイトなので、keyにindexを使用することによる危険性はない筈
+        "react/no-array-index-key": "off", // 今回は静的なサイトなので、keyにindexを使用することによる危険性はない筈
 
         "import/prefer-default-export": "off", // default exportよりnamed export派なので
         "import/no-default-export": "error", // default exportよりnamed export派なので

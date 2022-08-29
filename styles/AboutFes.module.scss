@@ -1,6 +1,6 @@
-.mainContent {
+.container {
     // background-color: rgb(253 186 116);
-    background: url("/images/背景_base.svg") rgb(186, 79, 13) repeat;
+    // background: url("/images/背景_base.svg") rgb(186, 79, 13) repeat;
     overflow-wrap: break-word;
 }
 
@@ -19,10 +19,11 @@
 }
 
 .ribbon {
-    width: 98vw;
+    width: 96vw;
     height: 10rem;
     top: -14.5rem;
-    left: calc(-1 * (98vw / 2));
+    left: calc(-1 * (96vw / 2));
+    margin: 0;
     &Content {
         background: url("/images/japanesePattern05.svg") rgb(118, 9, 27) repeat;
         width: 100%;
@@ -32,10 +33,25 @@
 
 .aboutFes {
     &Container {
-        width: calc(100% - 16rem);
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-areas: "decorationA areaAboutFes decorationB";
     }
-    hoge: hoge;
+    width: 100%;
     &Content {
         background: url("/images/背景_base.svg") rgba(186, 79, 13, 0.8) repeat;
     }
+}
+
+.decorationA {
+    grid-area: decorationA;
+}
+
+.decorationB {
+    grid-area: decorationB;
+}
+
+.tapestry {
+    width: calc(((100vw - 3rem) / 5) * (2 / 5));
+    height: calc((((100vw - 3rem) / 5) * (2 / 5)) * 2 + 2rem);
 }

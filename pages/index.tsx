@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.scss";
 import { Terminal } from "../components/Terminal";
 import { MainVisual } from "../components/MainVisual";
 import { AboutFes } from "../components/AboutFes";
+import { Access } from "../components/Access";
 
 const Home: NextPage = () => (
     <div className={styles.container}>
@@ -17,7 +18,13 @@ const Home: NextPage = () => (
         <main className={styles.main}>
             <MainVisual />
 
-            <AboutFes />
+            <Terminal className="">
+                <div className={`${styles.mainContent}`}>
+                    <AboutFes />
+    
+                    <Access />
+                </div>
+            </Terminal>
 
             <div id="terminals" className="flex flex-col gap-4">
                 <Terminal isDeletable>
